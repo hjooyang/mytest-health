@@ -1,19 +1,35 @@
 <ion-view view-title="Main">
   <ion-content>
-    <ion-list>
-      <ion-item href="">
-      검진센터 
-      검진예약
-      </ion-item>
-      <ion-item href="#/app/main/mc-main">
-      의료상담 (헬스케어)
-      </ion-item>
-      <ion-item href="#/app/playlists/{{playlist.id}}">
+  <div class="col">
+  
+  <div class="row">
+    <div class="card col">
+        <div class="item item-text-wrap main-card" >        
+          검진센터 
+          검진예약
+        </div>
+    </div>
+    <div class="card col">
+      <a href="#/app/main/mc-main">
+        <div class="item item-text-wrap main-card">
+        의료상담 
+        (헬스케어)
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card col">
+      <div class="item item-text-wrap main-card">
       검진결과 보관
-      </ion-item>
-	  <ion-item href="#/app/playlists/{{playlist.id}}">
-      건강관리
-      </ion-item>
-    </ion-list>
+      </div>
+    </div>
+    <div class="card col">
+      <div class="item item-text-wrap main-card">
+        건강관리
+      </div>
+    </div>
+  </div>
+  </div>
   </ion-content>
 </ion-view>

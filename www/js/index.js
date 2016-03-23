@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        console.log('init!');
     },
     // Bind Event Listeners
     //
@@ -34,15 +35,28 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        BMSClient.initialize("http://supa-medicare-hj.mybluemix.net", "ec836ec1-53ed-47b5-802e-c6fde5a3207d");
+        
+        MFPPush.registerDevice({}, function(data) {
+            alert("Success :: " + data);
+        }, function(error) {
+            alert("Failure :: " + error);
+        });
+
+        var notificationCallback = function(notification) {
+            alert("Incoming notification :: " + JSON.stringify(notification));
+        };
+
+        MFPPush.registerNotificationsCallback(notificationCallback);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     }
