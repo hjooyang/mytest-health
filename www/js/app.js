@@ -24,7 +24,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
+  .state('main', {
+        url: '/main',
+        templateUrl: 'templates/main.html'
+      })
+  .state('mc-main', {
+        url: '/main/mc-main',
+        templateUrl: 'templates/mc-main.html'
+      })
+  .state('mc-m-health', {
+        url: '/main/mc-main/mc-m-health',
+        templateUrl: 'templates/mc-m-health.html'
+      });
+  /*
     .state('app', {
     url: '/app',
     abstract: true,
@@ -75,7 +87,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'PlaylistCtrl'
         }
       }
-    });
+    });*/
 
   // .state('app.single', {
   //   url: '/playlists/:playlistId',
@@ -87,5 +99,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   //   }
   // });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/main');
+  $urlRouterProvider.otherwise('/main');
 });
