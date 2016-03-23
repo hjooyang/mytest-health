@@ -1,43 +1,36 @@
-<ion-view title="Main">
+<ion-view view-title="검진 예약">
   <ion-content>
   <div class="col">
   
   <div class="row">
     <div class="card col">
-      <a href="#/main/mr-main">
+      <a href="#/main/mc-main/mc-m-health">
         <div class="item item-text-wrap main-card" >        
-          검진센터 
-          검진예약
+                건강 상담
         </div>
       </a>
     </div>
     <div class="card col">
-      <a href="#/main/mc-main">
         <div class="item item-text-wrap main-card">
-        의료상담 
-        (헬스케어)
+        심리 상담
         </div>
-      </a>
     </div>
   </div>
   <div class="row">
     <div class="card col">
       <div class="item item-text-wrap main-card">
-      검진결과 보관
+      진료 방안  
       </div>
     </div>
     <div class="card col">
       <div class="item item-text-wrap main-card">
-        건강관리
+        상조 우대
       </div>
     </div>
   </div>
   </div>
-  <div class="row">
-  <div class="card col">
-      <div class="item item-text-wrap text-center">
-        Allianz
-      </div>
-    </div></div>
+  <ionic-datepicker date="currentDate" min="minDate" max="maxDate" callback="datePickerCallback">
+    <button class="button button-block button-positive"> {{ currentDate | date:'MMMM/dd/yyyy' }} </button>
+</ionic-datepicker>
   </ion-content>
 </ion-view>
