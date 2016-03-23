@@ -1,0 +1,37 @@
+<ion-view view-title="예약">
+  <ion-content>
+  <div class="list card">
+
+  <div class="item">
+    <div class="row">
+      <div class="col col-40">
+        <img src="mcfly.jpg">
+      </div>
+      <div class="col col-60">
+        <h2>간편 예약 따라하기</h2>
+        <p>November 05, 1955</p>
+      </div>
+    </div> 
+  </div>
+
+  <div class="item item-body">
+    <div class="list">
+      <div class="item item-divider"> 
+          건강검진을 받으시고자 하는 주된 동기는 무엇입니까?
+      </div>      
+      <ion-radio ng-repeat="motivation in motivations"
+                 ng-value="motivation.value"
+                 ng-model="data.clientSide">
+        {{ motivation.value }}
+      </ion-radio>
+      </div>
+    </div>
+    <a href="#/main/mr-main/mr-main-1/mr-main-2">
+      <button class="button button-full button-positive">
+          다음        
+      </button>
+    </a>
+
+  </div>
+  </ion-content>
+</ion-view>

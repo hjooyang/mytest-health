@@ -1,0 +1,57 @@
+<ion-view view-title="기본플러스 종합검진">
+  <ion-content>
+  <div class="row type-row">
+    <div class="col">
+      경제형건강검진
+    </div>
+    <div class="col">
+      기본종합검진
+    </div>
+    <div class="col selected">
+      기본플러스 종합검진
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      정밀종합검진
+    </div>
+    <div class="col">
+      정밀플러스 종합검진
+    </div>
+    <div class="col">
+      PEC-CT 정밀종합검진
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="item item-text-wrap">
+      <ul>
+        <li>검사비용 : 남 55만원대, 여 64만원대 (흉부 CT기준) </li>
+        <li>검사기간 : </li>
+        <li>검사지부 : 전국 16개지부</li>
+      </ul>
+      
+    </div>
+  </div>
+
+  <div class="list card">
+
+  <!--div class="item">
+    <div class="row">
+      <div class="col col-40">
+        <img src="mcfly.jpg">
+      </div>
+      <div class="col col-60">
+        <h2>기본플러스 종합검진</h2>
+        <p> </p>
+      </div>
+    </div> 
+  </div-->
+
+  <ion-list>
+    <ion-checkbox ng-repeat="test in tests" ng-model="filter.blue">{{test.value}}</ion-checkbox>
+  </ion-list>
+
+    <a href="#/main/mr-main/mr-main-1/mr-main-2/mr-main-3/mr-main-4/mr-main-5"><button class="button button-full button-positive">예약하기</button></a>
+  </ion-content>
+</ion-view>

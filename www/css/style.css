@@ -7,3 +7,13 @@
 /*ion-content {
 	background-color: #377ABD;
 }*/
+
+.type-row {
+}
+.type-row .selected {
+	background-color: darksalmon;
+}
+
+.item-reserve-comp {
+	padding: 20px;
+}

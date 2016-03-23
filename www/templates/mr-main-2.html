@@ -1,0 +1,33 @@
+<ion-view view-title="간단 문진표">
+  <ion-content>
+  <div class="list card">
+
+  <div class="item">
+    <div class="row">
+      <div class="col col-40">
+        <img src="mcfly.jpg">
+      </div>
+      <div class="col col-60">
+        <h2>간단 문진표
+        </h2>
+        <p> </p>
+      </div>
+    </div> 
+  </div>
+
+  <div class="item item-body">
+    <div class="list">
+      <label class="item item-input item-stacked-label" ng-repeat="question in questions">
+        <span class="input-label">{{question.value}}</span>
+        <input type="text" placeholder=''>
+      </label>
+    </div>
+    <a href="#/main/mr-main/mr-main-1/mr-main-2/mr-main-3">
+      <button class="button button-full button-positive">
+          다음        
+      </button>
+    </a>
+
+  </div>
+  </ion-content>
+</ion-view>

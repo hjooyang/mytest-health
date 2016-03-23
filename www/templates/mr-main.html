@@ -1,34 +1,42 @@
 <ion-view view-title="검진 예약">
   <ion-content>
-  <div class="col">
-  
-  <div class="row">
-    <div class="card col">
-      <a href="#/main/mc-main/mc-m-health">
-        <div class="item item-text-wrap main-card" >        
-                건강 상담
+    <ion-list>
+      <div ng-repeat="group in groups">
+        <ion-item class="item-stable"
+                  ng-click="toggleGroup(group)"
+                  ng-class="{active: isGroupShown(group)}">
+                  <div class="row">
+              <div class="col col-75">
+            <i class="icon" ng-class="isGroupShown(group) ? 'ion-plus' : 'ion-minus'"></i>
+          &nbsp;
+          {{group.name}} 
+          &nbsp;
+          <!-- <button class="button button-dark">예약하기</button> -->
+          </div>
+          <div class="col">
+            <a ng-href="#/main/mr-main/mr-main-1"><button class="button icon item-icon-right button-dark">예약</button></a>
+          </div>
         </div>
-      </a>
-    </div>
-    <div class="card col">
-        <div class="item item-text-wrap main-card">
-        심리 상담
-        </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="card col">
-      <div class="item item-text-wrap main-card">
-      진료 방안  
+        </ion-item>
+        <ion-item class="item-accordion"
+                  ng-repeat="item in group.items"
+                  ng-hide="isGroupShown(group)">
+                  <div class="row">
+                    <div class="col">
+                      {{item.name}}
+                    </div>
+                    <div class="col">
+                      {{item.price}}
+                    </div>
+                    <div class="col">
+                      {{item.discount}}
+                    </div>
+                  </div>
+          
+        </ion-item>
       </div>
-    </div>
-    <div class="card col">
-      <div class="item item-text-wrap main-card">
-        상조 우대
-      </div>
-    </div>
-  </div>
-  </div>
+    </ion-list>
+
   <ionic-datepicker date="currentDate" min="minDate" max="maxDate" callback="datePickerCallback">
     <button class="button button-block button-positive"> {{ currentDate | date:'MMMM/dd/yyyy' }} </button>
 </ionic-datepicker>

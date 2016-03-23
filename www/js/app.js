@@ -40,7 +40,33 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
         url: '/main/mr-main',
         templateUrl: 'templates/mr-main.html',
         controller: 'MRMainCtrl'
-      });
+      })
+   .state('mr-main-1', {
+        url: '/main/mr-main/mr-main-1',
+        templateUrl: 'templates/mr-main-1.html',
+        controller: 'MRMainCtrl'
+      })
+   .state('mr-main-2', {
+        url: '/main/mr-main/mr-main-1/mr-main-2',
+        templateUrl: 'templates/mr-main-2.html',
+        controller: 'MRMainCtrl'
+      })
+   .state('mr-main-3', {
+        url: '/main/mr-main/mr-main-1/mr-main-2/mr-main-3',
+        templateUrl: 'templates/mr-main-3.html',
+        controller: 'MRMainCtrl'
+      })
+   .state('mr-main-4', {
+        url: '/main/mr-main/mr-main-1/mr-main-2/mr-main-3/mr-main-4',
+        templateUrl: 'templates/mr-main-4.html',
+        controller: 'MRMainCtrl'
+      })
+   .state('mr-main-5', {
+        url: '/main/mr-main/mr-main-1/mr-main-2/mr-main-3/mr-main-4/mr-main-5',
+        templateUrl: 'templates/mr-main-5.html',
+        controller: 'MRMainCtrl'
+      })
+   ;
   /*
     .state('app', {
     url: '/app',
