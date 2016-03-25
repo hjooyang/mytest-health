@@ -36,9 +36,13 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
         url: '/main/mc-main/mc-m-health',
         templateUrl: 'templates/mc-m-health.html'
       })
-  .state('mr-main', {
-        url: '/main/mr-main',
-        templateUrl: 'templates/mr-main.html',
+  .state('cyber-counseling', {
+        url: '/main/cyber-counseling',
+        templateUrl: 'templates/cyber-counseling.html'
+      })
+  .state('reservation', {
+        url: '/main/reservation',
+        templateUrl: 'templates/reservation.html',
         controller: 'MRMainCtrl'
       })
    .state('mr-main-1', {

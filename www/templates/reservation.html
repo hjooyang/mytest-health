@@ -1,0 +1,43 @@
+
+<ion-view title="Choose reservation type">
+  <ion-nav-bar class="bar-stable" align-title="center">
+    <ion-nav-buttons  side="left">
+        <button class="button" ng-click="clickButton()">
+          <i class="button-icon icon ion-home" href="#/main"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons  side="right">
+      <a class="button button-small" href="#/sign-up">로그아웃</a>
+        <!-- <i class="button-icon icon ion-home"></i> -->
+        <!--i class="button-icon icon ion-loading-a" ng-show="loader.loading"></i-->
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content>
+
+
+<div class="row">
+  <div class="col">
+    <div class=" row main-menu"> 
+     <!--  <a href="#/main/activity">
+        <div class="item item-text-wrap main-card btn-sched" >        
+          활동하기
+        </div>
+      </a> -->
+      <a class="button button-full" id="btn-clinic-reserv" href="">Clinic Reservation</a>
+    </div>
+  </div>
+  <div class="col main-menu">
+    <a class="button button-full" id="btn-chkup-reserv" href="#/tab/eval">Medical Checkup Reservation</a>
+ <!--    <a href="#/main/schedule">
+        <div class="item item-text-wrap main-card btn-idea" >        
+          Idea for Ideal
+        </div>
+      </a> -->
+   </div>
+</div>
+
+  
+  </div>
+  </ion-content>
+</ion-view>

@@ -17,3 +17,18 @@
 .item-reserve-comp {
 	padding: 20px;
 }
+
+.main-menu a{
+	width: 100%;
+}
+
+#btn-clinic-reserv {
+	 border-radius: 25px;
+    padding: 20px;
+    width: 160px;
+    height: 170px;
+    background-color: cadetblue;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
