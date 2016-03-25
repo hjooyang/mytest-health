@@ -1,7 +1,35 @@
 /* Empty. Add your own CSS if you like */
 
+ion-content {
+    background-color: #7FABB9;
+}
 .main-card {
 	height: 150px;
+}
+
+.main-menu-card{
+    background-color: burlywood;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.logo-text 
+{
+    background-color: #1B1B56;
+    color: #fff;
+    font-size: large;
+    font-weight: 900;
+
+}
+
+.counsel-btns {
+	margin-top: 40px;
+	font-weight: 700;
+}
+
+.counsel-btns .button {
+	margin-top : 20px;
 }
 
 /*ion-content {
@@ -9,6 +37,7 @@
 }*/
 
 .type-row {
+	background-color: #fff;
 }
 .type-row .selected {
 	background-color: darksalmon;
@@ -32,3 +61,67 @@
     font-size: large;
     font-weight: bolder;
 }
+
+a#btn-chkup-reserv {
+    border-radius: 25px;
+    padding: 20px;
+    width: 160px;
+    height: 170px;
+    background-color: darksalmon;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.reserve-btns {
+	margin-top: 20px;
+}
+
+.reserv-info {
+	margin-top: 20px;
+}
+
+.platinum-info div.col,
+.normal-info div.col {
+    align-self: center;
+}
+
+.reserv-info button {
+    width: 80%;
+} 
+
+ion-item {
+	padding-right: 1px;
+	margin: 1px;
+}
+
+ion-item > .row {
+    padding: 1px;
+}
+
+ion-item.item-accordion.item {
+    padding: 5px;
+}
+
+.reserve-name {
+	width:300px;
+}
+.reserve-price {
+	font-size: small;
+	width:300px;
+}
+
+.btn_discount_p {
+    background-color: firebrick;
+    color: #fff;
+}
+
+.btn_discount_n {
+    background-color: darkslateblue;
+    color: #fff;
+}
+
+img#simple-reserv-icon {
+	width: 60%
+}
+

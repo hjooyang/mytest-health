@@ -1,13 +1,21 @@
 <ion-view view-title="의료 상담">
+<ion-nav-bar class="bar-dark" align-title="center">
+  <ion-nav-buttons  side="left">
+      <button class="button" ng-click="clickButton()">
+        <!-- <i class="button-icon icon ion-home"></i> -->
+      </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons  side="right">
+      <!--i class="button-icon icon ion-loading-a" ng-show="loader.loading"></i-->
+  </ion-nav-buttons>
+</ion-nav-bar>
   <ion-content>
   <div class="col">
   
   <div class="row">
     <div class="card col">
-      <a href="#/main/mc-main/mc-m-health">
-        <div class="item item-text-wrap main-card" >        
-                건강 상담
-        </div>
+      <a href="#/main/mc-main/mc-m-health" class="item item-text-wrap main-card" >        
+              건강 상담
       </a>
     </div>
     <div class="card col">

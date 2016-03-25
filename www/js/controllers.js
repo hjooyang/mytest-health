@@ -68,20 +68,20 @@ angular.module('starter.controllers', ['ionic-datepicker'])
 
   $scope.groups = [
     {
-        name: 'ㅇㅇ검진센터',
+        name: 'ㅇㅇCenter',
         items: [
-          { name: '프리미엄 검진', price: '3,000,000원', discount: '제휴: 50%'}, 
-          { name: '골드 플러스', price: '3,000,000원', discount: '제휴: 50%'},
-          { name: '기본플러스 종합', price: '3,000,000원', discount: '제휴: 50%'}
+          { name: 'Premium', price: '3,000,000원', discount_p: '50%', discount_n: '20%'}, 
+          { name: 'Gold Plus', price: '3,000,000원', discount_p: '30%', discount_n: '10%' },
+          { name: 'Basic', price: '3,000,000원', discount_p: '20%', discount_n: '10%'}
          ],
          id:1
     },
     {
-      name: '**병원',
+      name: '** Hospital',
       items: [
-          { name: 'VIP 검진', price: '3,000,000원', discount: '제휴: 50%'}, 
-          { name: '일반 검진', price: '3,000,000원', discount: '제휴: 50%'},
-          { name: '기초 검진', price: '3,000,000원', discount: '제휴: 50%'}
+          { name: 'VIP', price: '3,000,000원', discount_p: '40%', discount_n: '20%'}, 
+          { name: 'General', price: '3,000,000원', discount_p: '40%', discount_n: '10%'},
+          { name: 'Basic', price: '3,000,000원', discount_p: '40%', discount_n: '20%'}
       ],
       id: 2
     }];
@@ -93,12 +93,12 @@ angular.module('starter.controllers', ['ionic-datepicker'])
   ];
 
   $scope.questions = [
-    {id: 1, value: '1. 흡연정보'},
-    {id: 2, value: '2. 일주일 음주 정도'},
-    {id: 3, value: '3. 일주일 운동 정도'},
-    {id: 4, value: '4. 키'},
-    {id: 5, value: '5. 몸무게'},
-    {id: 6, value: '6. 가족력'}
+    {id: 1, value: '1. Smoking Information'},
+    {id: 2, value: '2. Smoking Information'},
+    {id: 3, value: '3. Smoking Information'},
+    {id: 4, value: '4. Height'},
+    {id: 5, value: '5. Weight'},
+    {id: 6, value: '6. heredity'}
   ];
 
   $scope.tests = [

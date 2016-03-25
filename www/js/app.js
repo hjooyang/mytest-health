@@ -45,6 +45,17 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
         templateUrl: 'templates/reservation.html',
         controller: 'MRMainCtrl'
       })
+  .state('mcheck-reserv', {
+        url: '/main/mcheck-reserv',
+        templateUrl: 'templates/mcheck-reserve.html',
+        controller: 'MRMainCtrl'
+      })
+  .state('simple-reserv', {
+        url: '/main/simple-reserv',
+        templateUrl: 'templates/simple-reserv.html',
+        controller: 'MRMainCtrl'
+      })
+
    .state('mr-main-1', {
         url: '/main/mr-main/mr-main-1',
         templateUrl: 'templates/mr-main-1.html',
@@ -65,9 +76,9 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
         templateUrl: 'templates/mr-main-4.html',
         controller: 'MRMainCtrl'
       })
-   .state('mr-main-5', {
-        url: '/main/mr-main/mr-main-1/mr-main-2/mr-main-3/mr-main-4/mr-main-5',
-        templateUrl: 'templates/mr-main-5.html',
+   .state('confirm', {
+        url: '/main/confirm',
+        templateUrl: 'templates/confirm.html',
         controller: 'MRMainCtrl'
       })
    ;

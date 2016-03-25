@@ -1,31 +1,41 @@
 <ion-view title="Main">
+<ion-nav-bar class="bar-dark" align-title="center">
+  <ion-nav-buttons  side="left">
+      <button class="button" ng-click="clickButton()">
+        <!-- <i class="button-icon icon ion-home"></i> -->
+      </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons  side="right">
+      <!--i class="button-icon icon ion-loading-a" ng-show="loader.loading"></i-->
+  </ion-nav-buttons>
+</ion-nav-bar>
+
   <ion-content>
+
   <div class="col">
   
   <div class="row">
     <div class="card col">
-      <a href="#/main/mc-main">
-        <div class="item item-text-wrap main-card" >        
+      <!-- a href="#/main/mc-main" -->
+        <a href="#/main/mc-main/mc-m-health" class="item item-text-wrap main-card main-menu-card" >       
           Health Consultation
-        </div>
-      </a>
+        </a>
+      <!-- </a> -->
     </div>
     <div class="card col">
-      <a href="#/main/reservation">
-        <div class="item item-text-wrap main-card">
+        <a href="#/main/reservation" class="item item-text-wrap main-card main-menu-card">
         Medical Checkup Reservation
-        </div>
-      </a>
+        </a>
     </div>
   </div>
   <div class="row">
     <div class="card col">
-      <div class="item item-text-wrap main-card">
+      <div class="item item-text-wrap main-card main-menu-card">
       Result of health check up
       </div>
     </div>
     <div class="card col">
-      <div class="item item-text-wrap main-card">
+      <div class="item item-text-wrap main-card main-menu-card">
         Health care
       </div>
     </div>
@@ -33,7 +43,7 @@
   </div>
   <div class="row">
   <div class="card col">
-      <div class="item item-text-wrap text-center">
+      <div class="item item-text-wrap text-center logo-text">
         Allianz
       </div>
     </div></div>
