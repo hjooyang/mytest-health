@@ -4,14 +4,15 @@ ion-content {
     background-color: steelblue;
 }
 .main-card {
-	height: 150px;
+	border-radius: 10px;
 }
 
 .main-menu-card{
     background-color: lavender;
-    border-radius: 25px;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: ;
+    font-size: 22px;
+    height: 150px;
 }
 
 #allianz-card {
