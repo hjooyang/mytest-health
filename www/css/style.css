@@ -1,17 +1,21 @@
 /* Empty. Add your own CSS if you like */
 
 ion-content {
-    background-color: #7FABB9;
+    background-color: steelblue;
 }
 .main-card {
 	height: 150px;
 }
 
 .main-menu-card{
-    background-color: burlywood;
+    background-color: lavender;
     border-radius: 25px;
     font-weight: 700;
-    font-size: x-large;
+    font-size: ;
+}
+
+#allianz-card {
+  background-color: #1B1B56;
 }
 
 .logo-text 
@@ -48,26 +52,29 @@ ion-content {
 	width: 100%;
 }
 
-#btn-clinic-reserv {
-	 border-radius: 25px;
-    padding: 20px;
-    width: 160px;
-    height: 170px;
-    background-color: cadetblue;
-    text-align: center;
-    font-size: large;
-    font-weight: bolder;
+.bgcolor-white {
+    background-color: white;
 }
 
+.check-title {
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+
+
+#btn-clinic-reserv, 
 a#btn-chkup-reserv {
     border-radius: 25px;
-    padding: 20px;
+    padding: 10px;
     width: 160px;
     height: 170px;
-    background-color: darksalmon;
+    background-color: lavender;
     text-align: center;
-    font-size: large;
+    font-size: 23px;
     font-weight: bolder;
+    border-color: darkgray;
+    border-width: 1px;
+    color: #092A6B;
 }
 
 .reserve-btns {
@@ -81,6 +88,14 @@ a#btn-chkup-reserv {
 .platinum-info div.col,
 .normal-info div.col {
     align-self: center;
+}
+
+.platinum-info .button, 
+.normal-info .button {
+    background-color: lavender;
+    border-color: darkblue;
+    font-weight: 700;
+    color: #092A6B
 }
 
 .reserv-info button {

@@ -1,5 +1,5 @@
-<ion-view view-title="예약">
-  <ion-content>
+<ion-view view-title="Green Melody">
+  <ion-content class="bgcolor-white">
   <div class="list card">
 
   <div class="item">
@@ -8,7 +8,12 @@
         <img id="simple-reserv-icon" src="img/simple-reserv-icon.png" >
       </div>
       <div class="col col-60">
-        <h2>Simple Reservation</h2>
+        <div class="row check-title">
+          Simple
+        </div>
+        <div class="row check-title">
+          Reservation
+        </div>         
       </div>
     </div> 
   </div>
@@ -16,7 +21,7 @@
   <div class="item item-body">
     <div class="list">
       <div class="item item-divider"> 
-          건강검진을 받으시고자 하는 주된 동기는 무엇입니까?
+          건강검진을 받으시고자 하는 주된 동기?
       </div>      
       <ion-radio ng-repeat="motivation in motivations"
                  ng-value="motivation.value"
