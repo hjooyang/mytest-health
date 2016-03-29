@@ -38,7 +38,8 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
       })
   .state('cyber-counseling', {
         url: '/main/cyber-counseling',
-        templateUrl: 'templates/cyber-counseling.html'
+        templateUrl: 'templates/cyber-counseling.html',
+        controller: 'Messages'
       })
   .state('reservation', {
         url: '/main/reservation',
@@ -56,11 +57,11 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
         controller: 'MRMainCtrl'
       })
 
-   .state('mr-main-1', {
-        url: '/main/mr-main/mr-main-1',
-        templateUrl: 'templates/mr-main-1.html',
-        controller: 'MRMainCtrl'
-      })
+   // .state('mr-main-1', {
+   //      url: '/main/mr-main/mr-main-1',
+   //      templateUrl: 'templates/mr-main-1.html',
+   //      controller: 'MRMainCtrl'
+   //    })
    .state('mr-main-2', {
         url: '/main/mr-main/mr-main-1/mr-main-2',
         templateUrl: 'templates/mr-main-2.html',
@@ -146,4 +147,42 @@ angular.module('starter', ['ionic', 'ionic-datepicker', 'starter.controllers'])
   // });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/main');
-});
+})
+.directive('input', function($timeout) {
+  return {
+    restrict: 'E',
+    scope: {
+      'returnClose': '=',
+      'onReturn': '&',
+      'onFocus': '&',
+      'onBlur': '&'
+    },
+    link: function(scope, element, attr) {
+      element.bind('focus', function(e) {
+        if (scope.onFocus) {
+          $timeout(function() {
+            scope.onFocus();
+          });
+        }
+      });
+      element.bind('blur', function(e) {
+        if (scope.onBlur) {
+          $timeout(function() {
+            scope.onBlur();
+          });
+        }
+      });
+      element.bind('keydown', function(e) {
+        if (e.which == 13) {
+          if (scope.returnClose) element[0].blur();
+          if (scope.onReturn) {
+            $timeout(function() {
+              scope.onReturn();
+            });
+          }
+        }
+      });
+    }
+  }
+})
+;
