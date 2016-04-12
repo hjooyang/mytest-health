@@ -143,21 +143,64 @@ angular.module('starter.controllers', ['ionic-datepicker'])
 
   $scope.hideTime = true;
 
-  var alternate,
+   $scope.receiveMessage = function(msg) {
+   
+
+  };
+
+
+  var socket = io.connect('https://supa-greenmelody.mybluemix.net/');
+
+     socket.on('P', function(msg) {
+           // alternate = !alternate;
+        console.log($scope.hideTime);
+
+        var d = new Date();
+      d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
+
+        $scope.messages.push({
+          userId: '54321',
+          text: msg
+        });
+
+
+        delete $scope.data.message;
+        $ionicScrollDelegate.scrollBottom(true);
+          console.log('i received hey..!');
+    });
+         $ionicScrollDelegate.scrollBottom(true);
+
+
+  var alternate = true,
     isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
+ 
+
   $scope.sendMessage = function() {
-    alternate = !alternate;
+    // alternate = !alternate;
     console.log($scope.hideTime);
 
     var d = new Date();
   d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
     $scope.messages.push({
-      userId: alternate ? '12345' : '54321',
+      userId: '12345',
       text: $scope.data.message,
       time: d
     });
+
+  
+
+
+    socket.emit('client', $scope.data.message);
+
+    // $('form').submit(function(){
+      // socket.emit('P', $('#m').val());
+      // $('#m').val('');
+      // return false;
+    // });
+
+ 
 
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
@@ -167,9 +210,9 @@ angular.module('starter.controllers', ['ionic-datepicker'])
 
   $scope.inputUp = function() {
     if (isIOS) $scope.data.keyboardHeight = 216;
-    $timeout(function() {
-      $ionicScrollDelegate.scrollBottom(true);
-    }, 300);
+    // $timeout(function() {
+    //   $ionicScrollDelegate.scrollBottom(true);
+    // }, 300);
 
   };
 
