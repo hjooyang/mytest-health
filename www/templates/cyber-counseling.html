@@ -39,7 +39,8 @@
 
     <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
       <label class="item-input-wrapper">
-        <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+        <!-- <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" /> -->
+      <textarea id="TextArea" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" ng-keyup="autoExpand($event)" placeholder="Type your message" class="ng-valid ng-touched ng-dirty" style="width: 100%; background-color: transparent;"></textarea>
       </label>
       <button class="button button-clear" ng-click="sendMessage()">
         Send
