@@ -147,35 +147,34 @@ angular.module('starter.controllers', ['ionic-datepicker'])
    
 
   };
-
+  // $scope.messages
 
   var socket = io.connect('https://supa-greenmelody.mybluemix.net/');
+  socket.on('P', function(msg) {
+       // alternate = !alternate;
+    console.log($scope.hideTime);
 
-     socket.on('P', function(msg) {
-           // alternate = !alternate;
-        console.log($scope.hideTime);
+    var d = new Date();
+    d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
-        var d = new Date();
-      d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
-
-        $scope.messages.push({
-          userId: '54321',
-          text: msg
-        });
-
-
-        delete $scope.data.message;
-        $ionicScrollDelegate.scrollBottom(true);
-          console.log('i received hey..!');
+    $scope.messages.push({
+      userId: '54321',
+      text: msg
     });
-         $ionicScrollDelegate.scrollBottom(true);
+    $scope.$apply();
 
+
+    delete $scope.data.message;
+    $ionicScrollDelegate.scrollBottom(true);
+      console.log('i received hey..!');
+  });
+  
+  $ionicScrollDelegate.scrollBottom(true);
 
   var alternate = true,
     isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
 
  
-
   $scope.sendMessage = function() {
     // alternate = !alternate;
     console.log($scope.hideTime);
